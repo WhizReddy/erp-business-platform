@@ -1,0 +1,195 @@
+{
+  "name": "@capire/sflight",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CAP flight demo scenario",
+  "license": "SAP SAMPLE CODE LICENSE",
+  "repository": "https://github.com/SAP-samples/cap-sflight",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "lint": "npx eslint .",
+    "start": "cds-serve",
+    "build:ui": "npm run build --prefix app/travel_analytics && npm run build --prefix app/travel_processor",
+    "test": "jest",
+    "test:mocha": "npx -y mocha",
+    "travel-processor": "cds watch --open sap.fe.cap.travel/index.html?sap-ui-xx-viewCache=false",
+    "travel-analytics": "cds watch --open sap.fe.cap.travel_analytics/index.html?sap-ui-xx-viewCache=false"
+  },
+  "dependencies": {
+    "@cap-js/hana": ">=2",
+    "@cap-js/postgres": "^2.3.0",
+    "@sap/cds": ">=9.5",
+    "@sap/xssec": "^4",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/cds-test": "^0 || ^1",
+    "@cap-js/cds-typer": "^0.38.0",
+    "@cap-js/cds-types": "^0",
+    "@cap-js/sqlite": ">=2",
+    "@sap/cds-dk": ">=9.5",
+    "@sap/ux-specification": "UI5-1.144",
+    "@types/jest": "^30.0.0",
+    "cds-plugin-ui5": "^0.17.0",
+    "cross-spawn": "^7.0.3",
+    "eslint": "^9 || ^10",
+    "http-proxy": "^1.18.1",
+    "jest": "^30.3.0",
+    "qunit": "^2.9.3",
+    "ts-jest": "^29.2.5",
+    "tsx": "^4.19.2",
+    "typescript-eslint": "^8.12.2"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sql"
+      },
+      "[production]": {
+        "db": {
+          "kind": "hana"
+        },
+        "auth": {
+          "kind": "xsuaa"
+        }
+      },
+      "[development]": {
+        "auth": {
+          "kind": "mocked-auth",
+          "users": {
+            "rose": {
+              "roles": [
+                "authenticated-user"
+              ]
+            },
+            "martha": {
+              "roles": [
+                "reviewer",
+                "authenticated-user"
+              ]
+            },
+            "amy": {
+              "roles": [
+                "processor",
+                "authenticated-user"
+              ]
+            },
+            "alice": {
+              "password": "alice",
+              "roles": [
+                "clerk",
+                "authenticated-user"
+              ]
+            },
+            "bob": {
+              "password": "bob",
+              "roles": [
+                "manager",
+                "authenticated-user"
+              ]
+            },
+            "hr": {
+              "password": "hr",
+              "roles": [
+                "hr",
+                "authenticated-user"
+              ]
+            },
+            "admin": {
+              "password": "admin",
+              "roles": [
+                "admin",
+                "processor",
+                "reviewer",
+                "clerk",
+                "manager",
+                "hr",
+                "authenticated-user"
+              ]
+            }
+          }
+        }
+      },
+      "[pg]": {
+        "db": {
+          "kind": "postgres",
+          "credentials": {
+            "host": "localhost",
+            "port": 5432,
+            "database": "erp_platform",
+            "user": "erp_user",
+            "password": "erp_secret"
+          }
+        }
+      }
+    },
+    "log": {
+      "service": true
+    },
+    "fiori": {
+      "wrap_multiple_errors": false
+    },
+    "build": {
+      "[node!]": {
+        "target": "gen",
+        "tasks": [
+          {
+            "for": "nodejs"
+          },
+          {
+            "for": "typescript"
+          },
+          {
+            "for": "hana"
+          }
+        ]
+      },
+      "[java]": {
+        "target": ".",
+        "tasks": [
+          {
+            "for": "java-cf"
+          }
+        ]
+      },
+      "[hana]": {
+        "target": "gen",
+        "tasks": [
+          {
+            "for": "hana"
+          }
+        ]
+      }
+    },
+    "typer": {
+      "output_directory": "@cds-models",
+      "use_entities_proxy": true
+    }
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "globalSetup": "./test/setup.ts",
+    "testEnvironment": "node",
+    "testTimeout": 20000
+  },
+  "mocha": {
+    "node-option": [
+      "import=tsx"
+    ],
+    "require": "test/setup.ts",
+    "spec": "test/**/*.ts",
+    "timeout": 20000
+  },
+  "sapux": [
+    "app/travel_processor",
+    "app/travel_analytics"
+  ],
+  "workspaces": [
+    "app/*"
+  ],
+  "imports": {
+    "#cds-models/*": "./@cds-models/*/index.js"
+  }
+}

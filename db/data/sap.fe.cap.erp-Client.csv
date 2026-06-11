@@ -1,0 +1,7 @@
+ClientUUID;ClientID;CompanyName;ContactPerson;Email;PhoneNumber;Street;PostalCode;City;CountryCode_code;VATNumber;CreditLimit;CurrencyCode_code;IsActive
+c1000001-0000-0000-0000-000000000001;1;TechNova Solutions;Alexandra Grant;a.grant@technova.com;+1-555-1001;123 Silicon Ave;94025;Menlo Park;US;US-123456789;150000;EUR;true
+c1000001-0000-0000-0000-000000000002;2;GlobalRetail Group;Bruno Schreiber;b.schreiber@globalretail.de;+49-89-555-2002;Maximilianstraße 12;80539;Munich;DE;DE-987654321;250000;EUR;true
+c1000001-0000-0000-0000-000000000003;3;Apex Logistics Ltd;Chen Wei;c.wei@apexlogistics.sg;+65-6555-3003;1 Harbour Front;098633;Singapore;SG;SG-246813579;100000;EUR;true
+c1000001-0000-0000-0000-000000000004;4;Nordic Systems AB;Ingrid Lindqvist;i.lindqvist@nordicsys.se;+46-8-555-4004;Kungsgatan 45;11122;Stockholm;SE;SE-135792468;80000;EUR;true
+c1000001-0000-0000-0000-000000000005;5;BrightMed Healthcare;Dr. Fatima Al-Hassan;f.alhassan@brightmed.ae;+971-4-555-5005;Health City Tower;00000;Dubai;AE;AE-112233445;200000;EUR;true
+c1000001-0000-0000-0000-000000000006;6;Orion Manufacturing;Roberto Esposito;r.esposito@orionmfg.it;+39-02-555-6006;Via Montenapoleone 8;20121;Milan;IT;IT-998877665;120000;EUR;true

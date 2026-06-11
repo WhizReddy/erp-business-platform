@@ -1,0 +1,9 @@
+EmployeeUUID;EmployeeID;FirstName;LastName;Email;PhoneNumber;HireDate;JobTitle;SalaryBand;Department_code;IsActive
+e1000001-0000-0000-0000-000000000001;1;Sarah;Mitchell;sarah.mitchell@erp-demo.com;+1-555-0101;2019-03-15;VP of Sales;L6;SALE;true
+e1000001-0000-0000-0000-000000000002;2;James;Carter;james.carter@erp-demo.com;+1-555-0102;2020-06-01;Senior Engineer;L5;ENGI;true
+e1000001-0000-0000-0000-000000000003;3;Priya;Sharma;priya.sharma@erp-demo.com;+1-555-0103;2018-11-20;Finance Controller;L5;FINA;true
+e1000001-0000-0000-0000-000000000004;4;Marcus;Lee;marcus.lee@erp-demo.com;+1-555-0104;2021-02-28;HR Manager;L4;HURE;true
+e1000001-0000-0000-0000-000000000005;5;Elena;Voronova;elena.voronova@erp-demo.com;+1-555-0105;2022-07-10;Operations Lead;L4;OPER;true
+e1000001-0000-0000-0000-000000000006;6;David;Kim;david.kim@erp-demo.com;+1-555-0106;2017-09-05;IT Director;L6;ITSE;true
+e1000001-0000-0000-0000-000000000007;7;Amara;Obi;amara.obi@erp-demo.com;+1-555-0107;2023-01-15;Junior Developer;L2;ENGI;true
+e1000001-0000-0000-0000-000000000008;8;Tom;Reynolds;tom.reynolds@erp-demo.com;+1-555-0108;2020-04-22;Account Executive;L3;SALE;true

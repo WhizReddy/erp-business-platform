@@ -1,0 +1,6 @@
+code;name
+UNPA;Unpaid
+PART;Partially Paid
+PAID;Paid
+OVER;Overdue
+CANC;Canceled

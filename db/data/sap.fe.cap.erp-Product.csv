@@ -1,0 +1,9 @@
+ProductUUID;ProductID;SKU;Name;Description;Category;UnitPrice;CurrencyCode_code;StockQuantity;MinStockLevel;IsActive
+p1000001-0000-0000-0000-000000000001;1;SW-ENT-001;Enterprise Suite License;Full-featured enterprise software license for up to 500 users;Software;8500.000;EUR;999;5;true
+p1000001-0000-0000-0000-000000000002;2;SW-CLD-002;Cloud Hosting Package;Annual cloud hosting with 99.99% SLA and 24/7 support;Services;2400.000;EUR;999;5;true
+p1000001-0000-0000-0000-000000000003;3;HW-SRV-003;ProServer X9;High-performance rack server with 128GB RAM and 10TB NVMe storage;Hardware;12000.000;EUR;45;3;true
+p1000001-0000-0000-0000-000000000004;4;SVC-CON-004;Consulting Day Rate;On-site consulting by a senior solution architect;Services;1800.000;EUR;999;1;true
+p1000001-0000-0000-0000-000000000005;5;HW-WKS-005;WorkStation Pro;Developer workstation with M3 chip and 64GB unified memory;Hardware;3200.000;EUR;22;5;true
+p1000001-0000-0000-0000-000000000006;6;SW-SEC-006;Security Shield Suite;Advanced cybersecurity package with real-time threat monitoring;Software;5500.000;EUR;999;5;true
+p1000001-0000-0000-0000-000000000007;7;SVC-TRN-007;Training Workshop;Full-day team training workshop (up to 20 participants);Services;900.000;EUR;999;1;true
+p1000001-0000-0000-0000-000000000008;8;HW-NET-008;GigaSwitch 48P;48-port enterprise network switch with PoE support;Hardware;2200.000;EUR;15;3;true
