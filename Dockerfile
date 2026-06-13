@@ -18,12 +18,9 @@ WORKDIR /app
 # Copy from builder
 COPY --from=builder /app /app
 
-# Expose the CAP server port
-EXPOSE 4004
-
-# Health check endpoint
-HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
-  CMD wget -qO- http://localhost:4004/ || exit 1
+# Ensure it binds to 0.0.0.0 and runs in production mode
+ENV NODE_ENV=production
+ENV HOST=0.0.0.0
 
 # Start the server using the standard npm start command
 CMD ["npm", "start"]
